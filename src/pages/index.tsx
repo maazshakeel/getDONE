@@ -6,6 +6,7 @@ import Logo from '@/components/Logo'
 import Navbar from '@/components/Navbar/Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faArrowRightArrowLeft, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,13 +24,15 @@ export default function Home() {
         <div className={styles.text}>
           <h1 className={styles.heading}>Are you working on a project? </h1>
           <p className={styles.paragraph}><span className={styles.bold}>getDone</span> is the choice to <span className={styles.boldUnderline}>focus</span> and <span className={styles.boldUnderline}>manage</span> your projects effectively!</p>
-          <button className={styles.buttonRegister}>Get Started
+          <Link href="/register" className={styles.link}>
+            <button className={styles.buttonRegister}>Get Started
 
-            <FontAwesomeIcon
-              icon={faArrowRight}
-              className={styles.icon}
-            />
-          </button>
+              <FontAwesomeIcon
+                icon={faArrowRight}
+                className={styles.icon}
+              />
+            </button>
+          </Link>
         </div>
       </main>
     </>

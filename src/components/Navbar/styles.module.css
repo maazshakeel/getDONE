@@ -38,5 +38,8 @@
     border-color: #FAA21D;
     margin-left: 1em;
     font-weight: bold;
+}
+.link {
+    text-decoration: none;
     color: #2f2c2a;
 }
