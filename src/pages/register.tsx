@@ -1,6 +1,9 @@
 import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
 import styles from '@/styles/Register.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IoLogoGoogle } from "react-icons/io5";
+
 
 export default function Register() {
     return (
@@ -24,7 +27,10 @@ export default function Register() {
 
                         <input type="submit" value="Continue with password" id="" placeholder="Enter your password..." className={styles.submitInput} />
                         <div className={styles.hr}></div>
-                        <input type="submit" value="Continue with Google" id="" className={styles.submitInput} />
+                        <button type="submit" id="" className={styles.submitGoogle}>
+                            <IoLogoGoogle className={styles.icon} />
+                            Continue with Google
+                        </button >
                     </form>
                 </div>
             </main>

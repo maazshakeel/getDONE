@@ -28,6 +28,10 @@
     font-weight: bold;
     color: #fff;
     text-align: end;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .buttonRegister {
     background-color: #FAA21D;

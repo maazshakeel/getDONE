@@ -1,3 +1,4 @@
+
 .main {
     background-color: #FBFBFB;
 }
@@ -51,21 +52,6 @@
     font-weight: bold;
 }
 
-.submitGoogle {
-    height: 3em;
-    padding-left: 1em;
-    width: 80%;
-    border: 1px solid #C5C8B4;
-    border-radius: 5px;
-    background-color: #FAA21D;
-    box-shadow: 0 0 0px #000;
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
     /* background-color: #FAA21D; */
 
 .hr {
@@ -80,8 +66,4 @@
 .inputs::placeholder {
     color: '#B9B9B6';
     opacity: 0.6;
-}
-.icon {
-  font-size: 1.2em;
-  margin-right: 5px;
 }
