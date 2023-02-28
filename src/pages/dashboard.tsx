@@ -24,7 +24,7 @@ export default function Home() {
           <h1 className={styles.heading}>No projects yet</h1>
           <div className={styles.buttonContainer}>
 
-            <Link href="/register" className={styles.link}>
+            <Link href="/create_project" className={styles.link}>
               <button className={styles.buttonRegister}>
                 <FontAwesomeIcon
                   icon={faPlus}
