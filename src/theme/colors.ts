@@ -1,9 +1,7 @@
 /** App Color Pallet */
 export const colors = {
-  primary: {
-    900: "#FAA21D",
-    800: "#2F2C2A",
-  },
+  main: "#FAA21D",
+  textMain: "#2F2C2A",
   success: {
     900: "#2E7D32",
     800: "#A5D6A7",
