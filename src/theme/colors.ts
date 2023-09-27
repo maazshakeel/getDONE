@@ -1,11 +1,8 @@
 /** App Color Pallet */
 export const colors = {
   primary: {
-    900: "#00234B",
-    800: "#4A90E2",
-    700: "#89CFF0",
-    600: "#F3FBFF",
-    500: "#F7F9FA",
+    900: "#FAA21D",
+    800: "#2F2C2A",
   },
   success: {
     900: "#2E7D32",
