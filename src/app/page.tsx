@@ -9,10 +9,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import Illustration from "./components/Illustration";
+import WithSubnavigation from "@/components/Navbar";
 
 export default function CallToActionWithIllustration() {
   return (
     <Container maxW={"5xl"}>
+      <WithSubnavigation />
       <Stack
         textAlign={"center"}
         align={"center"}
@@ -24,15 +26,16 @@ export default function CallToActionWithIllustration() {
           fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
           lineHeight={"110%"}
         >
-          Meeting scheduling{" "}
+          You working on{" "}
           <Text as={"span"} color={"main"}>
-            made easy
+            a project
           </Text>
         </Heading>
-        <Text color={"gray.500"} maxW={"3xl"}>
-          Never miss a meeting. Never be late for one too. Keep track of your
-          meetings and receive smart reminders in appropriate times. Read your
-          smart “Daily Agenda” every morning.
+        <Text color={"gray.500"} maxW={"2xl"}>
+          Unlock the extraordinary potential of getDONE, the ultimate solution
+          designed to revolutionize the way you approach your projects. In a
+          world filled with distractions, getDONE empowers you to reclaim
+          control over your tasks.
         </Text>
         <Stack spacing={6} direction={"row"}>
           <Button
