@@ -1,8 +1,8 @@
-import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({ subsets: ["latin"] });
+import { Open_Sans } from "next/font/google";
+const open_sans = Open_Sans({ subsets: ["latin"] });
 
 /** App Fonts */
 export const fonts = {
-  body: montserrat.style.fontFamily,
-  heading: montserrat.style.fontFamily,
+  body: open_sans.style.fontFamily,
+  heading: open_sans.style.fontFamily,
 };
