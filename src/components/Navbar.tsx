@@ -15,6 +15,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -31,8 +32,8 @@ export default function WithSubnavigation() {
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
-        py={{ base: 2 }}
+        minH={"50px"}
+        py={{ base: -4 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
@@ -54,13 +55,12 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            Logo
-          </Text>
+          <Image
+            src="/logo.png"
+            alt="box"
+            boxSize="90px"
+            objectFit={"scale-down"}
+          />
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -71,16 +71,16 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
-          spacing={6}
+          spacing={4}
         >
           <Button
             as={"a"}
             fontSize={"sm"}
             fontWeight={400}
-            variant={"link"}
+            variant={"ghost"}
             href={"#"}
           >
-            Sign In
+            Log In
           </Button>
           <Button
             as={"a"}
@@ -88,13 +88,14 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"main"}
             href={"#"}
+            rounded={"base"}
             _hover={{
-              bg: "pink.300",
+              bg: "orange.400",
             }}
           >
-            Sign Up
+            Get started
           </Button>
         </Stack>
       </Flex>
@@ -268,43 +269,4 @@ interface NavItem {
   href?: string;
 }
 
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Learn Design",
-    href: "#",
-  },
-  {
-    label: "Hire Designers",
-    href: "#",
-  },
-];
+const NAV_ITEMS: Array<NavItem> = [];

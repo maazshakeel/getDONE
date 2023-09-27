@@ -10,10 +10,11 @@ import {
 } from "@chakra-ui/react";
 import Illustration from "./components/Illustration";
 import WithSubnavigation from "@/components/Navbar";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 export default function CallToActionWithIllustration() {
   return (
-    <Container maxW={"5xl"}>
+    <Container maxW={"full"}>
       <WithSubnavigation />
       <Stack
         textAlign={"center"}
@@ -39,10 +40,11 @@ export default function CallToActionWithIllustration() {
         </Text>
         <Stack spacing={6} direction={"row"}>
           <Button
-            rounded={"full"}
+            rounded={"base"}
             px={6}
-            colorScheme={"orange"}
+            color={"white"}
             bg={"main"}
+            rightIcon={<ArrowForwardIcon />}
             _hover={{ bg: "orange.500" }}
           >
             Get started
