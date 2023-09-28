@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function App() {
   return (
-    <Container maxW={"full"}>
+    <Container maxW={"full"} userSelect={"none"}>
       <WithSubnavigation />
       <Stack
         textAlign={"center"}
