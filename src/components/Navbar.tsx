@@ -90,7 +90,7 @@ export default function WithSubnavigation() {
             fontWeight={600}
             color={"white"}
             bg={"main"}
-            href={"#"}
+            href={"/register"}
             rounded={"base"}
             _hover={{
               bg: "orange.400",
