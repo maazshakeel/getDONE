@@ -11,8 +11,9 @@ import {
 import Illustration from "./components/Illustration";
 import WithSubnavigation from "@/components/Navbar";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import Link from "next/link";
 
-export default function CallToActionWithIllustration() {
+export default function App() {
   return (
     <Container maxW={"full"}>
       <WithSubnavigation />
@@ -39,16 +40,18 @@ export default function CallToActionWithIllustration() {
           control over your tasks.
         </Text>
         <Stack spacing={6} direction={"row"}>
-          <Button
-            rounded={"base"}
-            px={6}
-            color={"white"}
-            bg={"main"}
-            rightIcon={<ArrowForwardIcon />}
-            _hover={{ bg: "orange.500" }}
-          >
-            Get started
-          </Button>
+          <Link href="/dashboard">
+            <Button
+              rounded={"base"}
+              px={6}
+              color={"white"}
+              bg={"main"}
+              rightIcon={<ArrowForwardIcon />}
+              _hover={{ bg: "orange.500" }}
+            >
+              Get started
+            </Button>
+          </Link>
           <Button rounded={"full"} px={6}>
             Learn more
           </Button>
