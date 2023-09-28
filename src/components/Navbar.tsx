@@ -34,7 +34,6 @@ export default function WithSubnavigation() {
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"50px"}
-        py={{ base: -4 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
@@ -56,12 +55,14 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Image
-            src="/logo.png"
-            alt="box"
-            boxSize="90px"
-            objectFit={"scale-down"}
-          />
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="box"
+              boxSize="90px"
+              objectFit={"scale-down"}
+            />
+          </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -74,14 +75,8 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={4}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"ghost"}
-            href={"/login"}
-          >
-            Log In
+          <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"}>
+            <Link href="/login">Log In</Link>
           </Button>
           <Button
             as={"a"}
@@ -90,13 +85,12 @@ export default function WithSubnavigation() {
             fontWeight={600}
             color={"white"}
             bg={"main"}
-            href={"/register"}
             rounded={"base"}
             _hover={{
               bg: "orange.400",
             }}
           >
-            Get started
+            <Link href="/register">Get started</Link>
           </Button>
         </Stack>
       </Flex>
@@ -165,7 +159,6 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       href={href}
       role={"group"}
       display={"block"}
-      p={2}
       rounded={"md"}
       _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
     >
