@@ -76,7 +76,7 @@ export default function WithSubnavigation() {
           spacing={4}
         >
           <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"}>
-            <Link href="/login">Log In</Link>
+            <Link href="/sign-in">Log In</Link>
           </Button>
           <Button
             as={"a"}
@@ -90,7 +90,7 @@ export default function WithSubnavigation() {
               bg: "orange.400",
             }}
           >
-            <Link href="/register">Get started</Link>
+            <Link href="/sign-up">Get started</Link>
           </Button>
         </Stack>
       </Flex>
