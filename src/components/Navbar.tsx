@@ -25,8 +25,39 @@ import {
 } from "@chakra-ui/icons";
 import Link from "next/link";
 
+import { useAuth } from "@clerk/nextjs";
+
+function NavbarButtons({ userId }: any) {
+  if (userId) {
+    return <p>signed in</p>;
+  }
+  return (
+    <>
+      <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"}>
+        <Link href="/sign-in">Log In</Link>
+      </Button>
+      <Button
+        as={"a"}
+        display={{ base: "none", md: "inline-flex" }}
+        fontSize={"sm"}
+        fontWeight={600}
+        color={"white"}
+        bg={"main"}
+        rounded={"base"}
+        _hover={{
+          bg: "orange.400",
+        }}
+      >
+        <Link href="/sign-up">Get started</Link>
+      </Button>
+    </>
+  );
+}
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+
+  const { userId } = useAuth();
 
   return (
     <Box>
@@ -75,23 +106,7 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={4}
         >
-          <Button as={"a"} fontSize={"sm"} fontWeight={400} variant={"ghost"}>
-            <Link href="/sign-in">Log In</Link>
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"main"}
-            rounded={"base"}
-            _hover={{
-              bg: "orange.400",
-            }}
-          >
-            <Link href="/sign-up">Get started</Link>
-          </Button>
+          <NavbarButtons userId={userId} />
         </Stack>
       </Flex>
 
